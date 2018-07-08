@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_084930) do
+ActiveRecord::Schema.define(version: 2018_07_07_094627) do
+
+  create_table "sessions", force: :cascade do |t|
+    t.integer "id_user"
+    t.string "token_session"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
